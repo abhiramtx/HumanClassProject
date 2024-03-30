@@ -2,17 +2,13 @@ public class Human {
     // Data members
     private String name;
     private int age;
-    private double height;
-    private double weight;
-    private String dob;
+    private int height;
     
     // Basic constructor
-    public Human(String name, int age, double height, double weight, String dob) {
+    public Human(String name, int age, int height) {
         this.name = name;
         this.age = age;
         this.height = height;
-        this.weight = weight;
-        this.dob = dob
     }
     
     // Getter methods
@@ -23,19 +19,11 @@ public class Human {
     public int getAge() {
         return age;
     }
-    
-    public double getWeight() {
-        return weight;
-    }
 
-    public double height() {
+    public int getHeight() {
         return height;
     }
-
-    public String dob() {
-        return dob;
-    }
-
+    
     // Setter methods
     public void setName(String name) {
         this.name = name;
@@ -45,18 +33,10 @@ public class Human {
         this.age = (age > 0) ? age : 1; // Ensure the age is positive
     }
 
-    public void setWeight(double weight) {
-        this.weight = weight;
+    public void setHeight(int height) {
+        this.height = (height > 0) ? height : 1;
     }
     
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setDOB(String dob) {
-        this.dob = dob;
-    }
-
     // Custom method
     public void talk(String message) {
         System.out.println(name + " says: " + message);
